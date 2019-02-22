@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="container xd-container">
+    <h2>Offers</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Title</th>
+          <th>Details</th>
+          <th>Discount</th>
+          <th>Date </th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr *ngFor="let offer of offers">
+          <td class="ownerFullName"><a routerLink="/owners/{{owner.id}}" routerLinkActive="active"
+                                       (click)="onSelect(owner)">{{owner.firstName}} {{owner.lastName}}</a></td>
+          <td>{{offer.title}}</td>
+          <td>{{offer.details}}</td>
+          <td>{{offer.discount}}</td>
+          <td>{{offer.date}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <div>
+        <button class="btn btn-default" (click)="addOwner()">Add Owner</button>
+      </div>
+    </div>
+  </div>
+</div>

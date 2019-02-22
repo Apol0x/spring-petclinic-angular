@@ -35,13 +35,13 @@ import {PartsModule} from './parts/parts.module';
 import {SpecialtiesModule} from './specialties/specialties.module';
 import {HttpErrorHandler} from './error.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { OffersComponent } from './app/offers/offers.component';
+import { OffersModule } from './offers/offers.module';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    OffersComponent,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +54,7 @@ import { OffersComponent } from './app/offers/offers.component';
     VetsModule,
     SpecialtiesModule,
     PartsModule,
+    OffersModule,
     BrowserAnimationsModule,
     AppRoutingModule
   ],
