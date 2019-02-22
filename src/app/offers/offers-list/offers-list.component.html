@@ -9,22 +9,37 @@
           <th>Details</th>
           <th>Discount</th>
           <th>Date </th>
+          <th>Delete</th>
+          <th>Edit</th>
         </tr>
         </thead>
 
         <tbody>
         <tr *ngFor="let offer of offers">
-          <td class="ownerFullName"><a routerLink="/owners/{{owner.id}}" routerLinkActive="active"
-                                       (click)="onSelect(owner)">{{owner.firstName}} {{owner.lastName}}</a></td>
           <td>{{offer.title}}</td>
+          <td>{{offer.description}}</td>
+          <td>{{offer.discount}}</td>
+          <td>{{offer.expiration}}</td>
+          <td><button class="btn btn-default" (click)="deleteOffer()">Del Offer</button></td>
+          <!-- <td><button class="btn btn-default" (click)="deleteOffer()">Edit Offer</button></td> -->
+          <th><a routerLink="./{{offer.id}}" class="btn btn-default" >Editar</a></th>
+        </tr>
+        <tr>
+          <!-- <td>{{offer.title}}</td>
           <td>{{offer.details}}</td>
           <td>{{offer.discount}}</td>
-          <td>{{offer.date}}</td>
+          <td>{{offer.date}}</td> -->
+          <td>
+          <!-- <button class="btn btn-default" (click)="deleteOffer()">Del Offer</button> -->
+          <!-- <button class="btn btn-default" (click)="editOffer()">Edit Offer</button> -->
+          
+        </td>
         </tr>
+
         </tbody>
       </table>
       <div>
-        <button class="btn btn-default" (click)="addOwner()">Add Owner</button>
+        <a class="btn btn-default" routerLink="./add">Add Offer</a><!-- <button class="btn btn-default" (click)="addOffer()">Add Offer</button> -->
       </div>
     </div>
   </div>

@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { OffersListComponent } from './offers-list/offers-list.component';
@@ -9,6 +10,7 @@ import { OffersService } from './offers.service';
 @NgModule({
   imports: [
     CommonModule,
+    FormsModule,
     OfferRoutingModule
   ],
   declarations: [OffersListComponent, OffersAddComponent, OffersEditComponent],

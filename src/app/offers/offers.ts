@@ -1,7 +1,8 @@
 export interface Offers {
     id: number;
     title: string;
-    detail: string;
+    description: string;
     discount: number;
-    date: Date;
+    expiration: Date;
+    valid: boolean;
 }

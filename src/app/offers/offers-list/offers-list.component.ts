@@ -1,7 +1,7 @@
+import { OffersService } from './../offers.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Offers } from '../offers';
-import { OffersService } from '../offers.service';
 
 @Component({
   selector: 'app-offers-list',
@@ -14,7 +14,14 @@ export class OffersListComponent implements OnInit {
 
   constructor(private router: Router, private offerService: OffersService) { }
 
-  ngOnInit() {
+  ngOnInit(
+    
+  ) {
+    this.offerService.getOffers().subscribe(
+      offers => this.offers = offers)
   }
 
+  deleteOffer(offerId: string){
+  this.offerService.deleteOffer(offerId).subscribe();
+  }
 }

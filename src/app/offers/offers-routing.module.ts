@@ -7,7 +7,7 @@ import { OffersEditComponent } from './offers-edit/offers-edit.component';
 const ownerRoutes: Routes = [
   {path: 'offers', component: OffersListComponent},
   {path: 'offers/add', component: OffersAddComponent},
-  {path: 'offers/:id', component: OffersEditComponent},
+  {path: 'offers/:id', component: OffersEditComponent}
 ];
 
 @NgModule({
